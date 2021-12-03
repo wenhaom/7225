@@ -11,21 +11,15 @@ import javax.annotation.PostConstruct;
 import java.util.Map;
 import java.util.Set;
 
-
 @Repository
 public class RedisDaoImpl implements RedisDao{
-
-
-
     private RedisTemplate<String, Object> redisTemplate;
     private ChannelTopic topic;
     private HashOperations hashOperations;
     private SetOperations setOperations;
 
-
-
     @Autowired
-    public RedisDaoImpl(RedisTemplate<String, Object>  redisTemplate, ChannelTopic topic){
+    public RedisDaoImpl(RedisTemplate<String, Object> redisTemplate, ChannelTopic topic){
         this.redisTemplate = redisTemplate;
         this.topic = topic;
     }
